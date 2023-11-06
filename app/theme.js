@@ -47,15 +47,15 @@ export const theme = createTheme({
     MuiAppBar: {
       styleOverrides: {
         root: {
-          // background:
-          //   "linear-gradient(\n    90deg,\n    rgba(78, 78, 246, 0.647) 0%,\n    rgba(247, 90, 216, 0.696) 100%\n  )",
-          // color: "white",
-          // borderRadius: "16px",
-          // boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
-          // backdropFilter: "blur(5px)",
-          // WebkitBackdropFilter: "blur(5px)",
-          // border: "2px solid white",
-          // alignItems: "center",
+          background:
+            "linear-gradient(\n    90deg,\n    rgba(78, 78, 246, 0.647) 0%,\n    rgba(247, 90, 216, 0.696) 100%\n  )",
+          color: "white",
+          borderRadius: "16px",
+          boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
+          backdropFilter: "blur(5px)",
+          WebkitBackdropFilter: "blur(5px)",
+          border: "1px solid white",
+          alignItems: "center",
           width: "93.5%",
           right: "3.2%",
         },

@@ -1,5 +1,4 @@
-"use client";
-import React, { useState } from "react";
+import * as React from "react";
 
 import Box from "@mui/material/Box";
 import List from "@mui/material/List";
@@ -17,39 +16,38 @@ import FormGroup from "@mui/material/FormGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
 import Grid from "@mui/material/Grid";
-
+import Typography from "@mui/material/Typography";
 import AbcIcon from "@mui/icons-material/Abc";
 import { Cake, LanguageOutlined, Mail } from "@mui/icons-material";
 import { ListItemButton } from "@mui/material";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 export default function InteractiveList() {
-  const [secondary, setSecondary] = useState(false);
   return (
     <Box sx={{ flexGrow: 1, overflow: "auto" }}>
-      <br />
-      <div className="custom-input-color About3">
-        <h2>
-          <FormGroup row>
-            <FormControlLabel
-              control={
-                <Checkbox
-                  checked={secondary}
-                  onChange={(event) => setSecondary(event.target.checked)}
-                  className="custom-input-color"
-                  style={{ color: "white" }}
-                />
-              }
-              label="Click Show Basic info"
+      <FormGroup row>
+        <FormControlLabel
+          control={
+            <Checkbox
+              checked={secondary}
+              onChange={(event) => setSecondary(event.target.checked)}
               className="custom-input-color"
             />
-          </FormGroup>
-        </h2>
-      </div>
+          }
+          label="Show Basic info"
+          className="custom-input-color"
+        />
+      </FormGroup>
+      <Typography
+        sx={{ mt: 4, mb: 2 }}
+        variant="h6"
+        component="div"
+        className="custom-input-color"
+      >
+        Basic Info
+      </Typography>
       <Grid container spacing={2} sx={{ display: "flex", overflow: "auto" }}>
         <Grid item xs={6} md={6} sm={12} lg={12}>
-          <div className="About3">
-            <p>My Basic Info</p>
-          </div>
           <Box
             sx={{
               display: "flex",
@@ -59,13 +57,9 @@ export default function InteractiveList() {
           >
             <Grid item lg={12} sm={12}>
               <List>
-                <ListItemButton
-                  data-aos="zoom-in"
-                  data-aos-delay="200"
-                  data-aos-duration="500"
-                >
+                <ListItemButton>
                   <ListItemIcon className="ListItemText">
-                    <AbcIcon className="custom-input-color" />
+                    <AbcIcon />
                   </ListItemIcon>
                   <ListItemText
                     className="ListItemText"
@@ -73,13 +67,9 @@ export default function InteractiveList() {
                     secondary={secondary ? "SuFian Mustafa" : null}
                   />
                 </ListItemButton>
-                <ListItemButton
-                  data-aos="zoom-in"
-                  data-aos-delay="200"
-                  data-aos-duration="500"
-                >
+                <ListItemButton>
                   <ListItemIcon className="ListItemText">
-                    <TodayIcon className="custom-input-color" />
+                    <TodayIcon />
                   </ListItemIcon>
                   <ListItemText
                     className="ListItemText"
@@ -87,13 +77,9 @@ export default function InteractiveList() {
                     secondary={secondary ? "27" : null}
                   />
                 </ListItemButton>
-                <ListItemButton
-                  data-aos="zoom-in"
-                  data-aos-delay="200"
-                  data-aos-duration="500"
-                >
+                <ListItemButton>
                   <ListItemIcon className="ListItemText">
-                    <Cake className="custom-input-color" />
+                    <Cake />
                   </ListItemIcon>
                   <ListItemText
                     className="ListItemText"
@@ -105,13 +91,9 @@ export default function InteractiveList() {
             </Grid>
             <Grid item lg={12} sm={12}>
               <List>
-                <ListItemButton
-                  data-aos="zoom-in"
-                  data-aos-delay="200"
-                  data-aos-duration="500"
-                >
+                <ListItemButton>
                   <ListItemIcon className="ListItemText">
-                    <MosqueIcon className="custom-input-color" />
+                    <MosqueIcon />
                   </ListItemIcon>
                   <ListItemText
                     className="ListItemText"
@@ -119,13 +101,9 @@ export default function InteractiveList() {
                     secondary={secondary ? "Islam (Sunni)" : null}
                   />
                 </ListItemButton>
-                <ListItemButton
-                  data-aos="zoom-in"
-                  data-aos-delay="200"
-                  data-aos-duration="500"
-                >
+                <ListItemButton>
                   <ListItemIcon className="ListItemText">
-                    <CodeIcon className="custom-input-color" />
+                    <CodeIcon />
                   </ListItemIcon>
                   <ListItemText
                     className="ListItemText"
@@ -133,13 +111,9 @@ export default function InteractiveList() {
                     secondary={secondary ? "Web Development" : null}
                   />
                 </ListItemButton>
-                <ListItemButton
-                  data-aos="zoom-in"
-                  data-aos-delay="200"
-                  data-aos-duration="500"
-                >
+                <ListItemButton>
                   <ListItemIcon className="ListItemText">
-                    <InfoIcon className="custom-input-color" />
+                    <InfoIcon />
                   </ListItemIcon>
                   <ListItemText
                     className="ListItemText"
@@ -153,13 +127,9 @@ export default function InteractiveList() {
             </Grid>
             <Grid item lg={12} sm={12}>
               <List sx={{ overflow: "auto" }}>
-                <ListItemButton
-                  data-aos="zoom-in"
-                  data-aos-delay="200"
-                  data-aos-duration="500"
-                >
+                <ListItemButton>
                   <ListItemIcon className="ListItemText">
-                    <LocalPhoneIcon className="custom-input-color" />
+                    <LocalPhoneIcon />
                   </ListItemIcon>
                   <ListItemText
                     className="ListItemText"
@@ -167,13 +137,9 @@ export default function InteractiveList() {
                     secondary={secondary ? "+923177652064" : null}
                   />
                 </ListItemButton>
-                <ListItemButton
-                  data-aos="zoom-in"
-                  data-aos-delay="200"
-                  data-aos-duration="500"
-                >
+                <ListItemButton>
                   <ListItemIcon className="ListItemText">
-                    <Mail className="custom-input-color" />
+                    <Mail />
                   </ListItemIcon>
                   <ListItemText
                     className="ListItemText"
@@ -181,13 +147,9 @@ export default function InteractiveList() {
                     secondary={secondary ? "sufianmustafa0900@gmail.com" : null}
                   />
                 </ListItemButton>
-                <ListItemButton
-                  data-aos="zoom-in"
-                  data-aos-delay="200"
-                  data-aos-duration="500"
-                >
+                <ListItemButton>
                   <ListItemIcon className="ListItemText">
-                    <FlagIcon className="custom-input-color" />
+                    <FlagIcon />
                   </ListItemIcon>
                   <ListItemText
                     className="ListItemText"
@@ -199,13 +161,9 @@ export default function InteractiveList() {
             </Grid>
             <Grid item lg={12} sm={12}>
               <List sx={{ overflow: "auto" }}>
-                <ListItemButton
-                  data-aos="zoom-in"
-                  data-aos-delay="200"
-                  data-aos-duration="500"
-                >
+                <ListItemButton>
                   <ListItemIcon className="ListItemText">
-                    <SportsEsportsIcon className="custom-input-color" />
+                    <SportsEsportsIcon />
                   </ListItemIcon>
                   <ListItemText
                     className="ListItemText"
@@ -213,13 +171,9 @@ export default function InteractiveList() {
                     secondary={secondary ? "Video Games" : null}
                   />
                 </ListItemButton>
-                <ListItemButton
-                  data-aos="zoom-in"
-                  data-aos-delay="200"
-                  data-aos-duration="500"
-                >
+                <ListItemButton>
                   <ListItemIcon className="ListItemText">
-                    <LanguageOutlined className="custom-input-color" />
+                    <LanguageOutlined />
                   </ListItemIcon>
                   <ListItemText
                     className="ListItemText"
